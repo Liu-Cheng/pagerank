@@ -12,11 +12,7 @@ int main(int argc, char** argv){
     double elapsed_sec;
 
     Graph* gptr = new Graph();
-    //gptr->createGraphFromFile("../test/folkman.txt");
-    //gptr->createGraphFromFile("../test/barabasi-100000.txt");
-    //gptr->createGraphFromFile("./rmat.1mv.16me");
-    //gptr->createGraphFromFile("./wikitalk.txt");
-    gptr->createGraphFromFile("./rmat1.txt");
+    gptr->createGraphFromFile("./data/rmat2.txt");
 
     begin = clock();
     gptr->clustering();
@@ -32,7 +28,7 @@ int main(int argc, char** argv){
     std::cout << "Pagerank rum time: " << elapsed_sec << std::endl;
     std::cout << "iteration number: " << it_num << std::endl;
     std::cout << "# of vertex pair with identical input: " << gptr->pair << std::endl;
-    gptr->printPR();
+    //gptr->printPR();
     //gptr->dumpDot("./graph.dot");
 
     return 0;

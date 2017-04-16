@@ -3,7 +3,7 @@ CC = g++
 CFLAGS= -g -O3
 #CFLAGS= -g -pg -O3
 TARGET = pagerank 
-SRCS = pagerank.cpp
+SRCS = pagerank.cpp graph.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
